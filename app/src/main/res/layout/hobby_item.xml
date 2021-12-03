@@ -10,10 +10,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="7dp"
         android:background="@drawable/item_rounding">
 
         <ImageView
-            android:id="@+id/hobbyImage"
+            android:id="@+id/hobby_img"
             android:layout_width="140dp"
             android:layout_height="90dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +25,11 @@
             android:layout_marginLeft="9dp"/>
 
         <TextView
-            android:id="@+id/hobbyTitle"
+            android:id="@+id/hobby_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@+id/hobbyImage"
-            app:layout_constraintTop_toTopOf="@+id/hobbyImage"
+            app:layout_constraintStart_toEndOf="@+id/hobby_img"
+            app:layout_constraintTop_toTopOf="@+id/hobby_img"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="5dp"
             android:fontFamily="@font/notosanscjkkr_regular"
@@ -37,16 +39,17 @@
             android:text="title"/>
 
         <TextView
+            android:id="@+id/hobby_des"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/hobbyTitle"
-            app:layout_constraintStart_toStartOf="@id/hobbyTitle"
+            app:layout_constraintTop_toBottomOf="@+id/hobby_title"
+            app:layout_constraintStart_toStartOf="@id/hobby_title"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/notosanscjkkr_regular"
             android:includeFontPadding="false"
             android:textColor="@color/black"
             android:textSize="15sp"
-            android:text="title"/>
+            android:text="description"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
