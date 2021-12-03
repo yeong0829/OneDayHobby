@@ -50,7 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tos_top_bar"
+        android:divider="@null"
+        android:dividerHeight="0dp"
         tools:listitem="@layout/hobby_item" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
