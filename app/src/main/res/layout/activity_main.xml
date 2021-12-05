@@ -8,57 +8,97 @@
     android:background="@color/back_gray"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/tos_top_bar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/white"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/tos_pass_btn"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="1dp"
-            android:layout_gravity="center_vertical"
-            android:background="@color/white"
-            android:padding="10dp"
-            android:src="@drawable/ic_back" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="right"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            android:fontFamily="@font/notosanscjkkr_medium"
-            android:includeFontPadding="false"
-            android:text="오늘의 추천"
-            android:textColor="@color/text_blue"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <ListView
-        android:id="@+id/hobby_list"
-        android:layout_width="match_parent"
-        android:layout_height="600dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tos_top_bar"
-        android:divider="@null"
-        android:dividerHeight="0dp"
-        tools:listitem="@layout/hobby_item" />
 
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/slidingUpPanelLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:elevation="0dp"
+        android:gravity="bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:umanoDragView="@id/dragView"
+        app:umanoOverlay="true"
+        app:umanoPanelHeight="50dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/tos_top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/tos_pass_btn"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/notosanscjkkr_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="오늘의 추천"
+                    android:textColor="@color/text_blue"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/hobby_list"
+                android:layout_width="match_parent"
+                android:layout_height="550dp"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tos_top_bar"
+                tools:listitem="@layout/hobby_item" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/dragView"
+            android:layout_width="match_parent"
+            android:layout_height="510dp"
+            android:background="@drawable/sliding_background"
+            android:elevation="0sp"
+            android:orientation="vertical"
+            app:elevation="0sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/notosanscjkkr_medium"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp"
+                android:text="List"
+                android:textColor="@color/text_blue"
+                android:textSize="18sp" />
+
+
+        </LinearLayout>
 
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
