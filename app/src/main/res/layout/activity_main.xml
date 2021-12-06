@@ -74,7 +74,7 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/dragView"
             android:layout_width="match_parent"
             android:layout_height="510dp"
@@ -92,13 +92,63 @@
                 android:layout_marginTop="10dp"
                 android:text="List"
                 android:textColor="@color/text_blue"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/info_fab_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#ECA799"
+                android:rotation="45"
+                app:rippleColor="@color/fab_blue"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:src="@drawable/ic_plant_edit"
+                app:fab_shadow="false"
+                app:layout_constraintBottom_toBottomOf="@+id/info_fab"
+                app:layout_constraintEnd_toEndOf="@id/info_fab"
+                app:layout_constraintLeft_toLeftOf="@+id/info_fab"
+                app:layout_constraintTop_toTopOf="@+id/info_fab" />
 
-        </LinearLayout>
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/info_fab_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rippleColor="@color/fab_blue"
+                android:backgroundTint="#A8B5EA"
+                android:elevation="0dp"
+                app:elevation="0dp"
+                android:src="@drawable/ic_plant_edit"
+                app:fabSize="normal"
+                app:fab_shadow="false"
+                app:layout_constraintBottom_toBottomOf="@+id/info_fab"
+                app:layout_constraintEnd_toEndOf="@id/info_fab"
+                app:layout_constraintLeft_toLeftOf="@+id/info_fab"
+                app:layout_constraintTop_toTopOf="@+id/info_fab" />
 
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/info_fab"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/fab_blue"
+                android:src="@drawable/ic_info_fab"
+                app:fabCustomSize="49dp"
+                app:fab_shadow="false"
+                app:hideOnScroll="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/fab_blue" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
