@@ -8,7 +8,6 @@
     android:background="@color/back_gray"
     tools:context=".MainActivity">
 
-
     <com.sothree.slidinguppanel.SlidingUpPanelLayout
         android:id="@+id/slidingUpPanelLayout"
         android:layout_width="match_parent"
@@ -148,7 +147,5 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.sothree.slidinguppanel.SlidingUpPanelLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

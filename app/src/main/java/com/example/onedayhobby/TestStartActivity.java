@@ -17,7 +17,7 @@ public class TestStartActivity extends AppCompatActivity {
         setContentView(R.layout.activity_test_start);
 
         // 뒤로가기버튼
-        backBtn = findViewById(R.id.tos_pass_btn);
+        backBtn = findViewById(R.id.back_btn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
