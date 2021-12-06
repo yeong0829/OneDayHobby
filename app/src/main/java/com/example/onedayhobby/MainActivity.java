@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.animation.ObjectAnimator;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -21,15 +24,12 @@ public class MainActivity extends AppCompatActivity {
     private FloatingActionButton fabMain;
     private FloatingActionButton fabDel;
     private FloatingActionButton fabEdit;
+    private ImageButton backBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        fabMain = findViewById(R.id.info_fab);
-        fabDel = findViewById(R.id.info_fab_del);
-        fabEdit = findViewById(R.id.info_fab_edit);
 
         /* 위젯과 멤버변수 참조 획득 */
         mListView = (ListView)findViewById(R.id.hobby_list);
@@ -38,13 +38,16 @@ public class MainActivity extends AppCompatActivity {
         dataSetting();
 
         // 메인플로팅 버튼 클릭
+        fabMain = findViewById(R.id.info_fab);
         fabMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggleFab();
             }
         });
+
         // 삭제 플로팅 버튼 클릭
+        fabDel = findViewById(R.id.info_fab_del);
         fabDel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,10 +56,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // 수정 플로팅 버튼 클릭
+        fabEdit = findViewById(R.id.info_fab_edit);
         fabEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "수정 버튼 클릭", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        // 뒤로가기
+        backBtn = findViewById(R.id.tos_pass_btn);
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),StartActivity.class);
+                startActivity(intent);
             }
         });
     }
