@@ -43,6 +43,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="85dp"
@@ -55,5 +56,27 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:text="문항1"/>
+
+    <Button
+        android:id="@+id/yes_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question"
+        android:text="네"
+        android:backgroundTint="@color/white"/>
+
+    <Button
+        android:id="@+id/no_btn"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yes_btn"
+        android:text="아니요"
+        android:backgroundTint="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
