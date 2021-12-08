@@ -13,4 +13,5 @@
     <color name="fab_blue">#98C4EC</color>
     <color name="transparent">#00FFFFFF</color>
     <color name="check_gray">#868686</color>
+    <color name="gray_strock">#CCCCCC</color>
 </resources>

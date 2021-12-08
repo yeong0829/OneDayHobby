@@ -5,12 +5,14 @@ import androidx.core.content.ContextCompat;
 
 import android.animation.ObjectAnimator;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.melnykov.fab.FloatingActionButton;
@@ -55,15 +57,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // 수정 플로팅 버튼 클릭
+        // 추가 플로팅 버튼 클릭
         fabEdit = findViewById(R.id.info_fab_edit);
+        final TextView plan_test = (TextView)findViewById(R.id.plan_test);
         fabEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "수정 버튼 클릭", Toast.LENGTH_SHORT).show();
+                CustomDialog customDialog = new CustomDialog(MainActivity.this);
+
+                customDialog.callFunction(plan_test);
             }
         });
-
 
         // 뒤로가기
         backBtn = findViewById(R.id.tos_pass_btn);
@@ -74,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 
     private void dataSetting(){
