@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/animation"
         android:layout_marginTop="40dp"
         android:elevation="0dp"
-        android:text="테스트 시작"
+        android:text="랜덤 추천"
         android:textSize="24dp"
         android:fontFamily="@font/notosanscjkkr_light"
         android:includeFontPadding="false"

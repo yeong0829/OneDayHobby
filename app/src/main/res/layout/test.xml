@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dragView"
+        android:layout_width="match_parent"
+        android:layout_height="510dp"
+        android:background="@drawable/sliding_background"
+        android:elevation="0sp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:elevation="0sp">
+
+        <TextView
+            android:id="@+id/list_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/notosanscjkkr_medium"
+            android:includeFontPadding="false"
+            android:layout_marginTop="10dp"
+            android:text="List"
+            android:textColor="@color/text_blue"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/list_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="80dp">
+
+
+        </ListView>
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/info_fab_del"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#ECA799"
+            android:rotation="45"
+            app:rippleColor="@color/fab_blue"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:src="@drawable/ic_plant_edit"
+            app:fab_shadow="false"
+            app:layout_constraintBottom_toBottomOf="@+id/info_fab"
+            app:layout_constraintEnd_toEndOf="@id/info_fab"
+            app:layout_constraintLeft_toLeftOf="@+id/info_fab"
+            app:layout_constraintTop_toTopOf="@+id/info_fab" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/info_fab_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:rippleColor="@color/fab_blue"
+            android:backgroundTint="#A8B5EA"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:src="@drawable/ic_plant_edit"
+            app:fabSize="normal"
+            app:fab_shadow="false"
+            app:layout_constraintBottom_toBottomOf="@+id/info_fab"
+            app:layout_constraintEnd_toEndOf="@id/info_fab"
+            app:layout_constraintLeft_toLeftOf="@+id/info_fab"
+            app:layout_constraintTop_toTopOf="@+id/info_fab" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/info_fab"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/fab_blue"
+            android:src="@drawable/ic_info_fab"
+            app:fabCustomSize="49dp"
+            app:fab_shadow="false"
+            app:hideOnScroll="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/fab_blue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

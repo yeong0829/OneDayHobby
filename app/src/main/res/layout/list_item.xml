@@ -7,12 +7,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <CheckBox
-            android:id="@+id/check_box"
-            android:layout_width="31dp"
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="wrap_content"
             android:layout_height="29dp"
             android:buttonTint="@color/check_gray"
             android:checked="false"
+            android:text="1"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +31,7 @@
             android:textColor="@color/check_gray"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/check_box"
+            app:layout_constraintLeft_toRightOf="@+id/num"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

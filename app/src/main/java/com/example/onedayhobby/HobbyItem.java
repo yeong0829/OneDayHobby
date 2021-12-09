@@ -4,15 +4,23 @@ import android.graphics.drawable.Drawable;
 
 public class HobbyItem {
 
-    private Drawable icon;
-    private String name;
-    private String contents;
+    public int icon;
+    public String name;
+    public String contents;
+    public String longContents;
 
-    public Drawable getIcon() {
+    public HobbyItem(int icon, String name, String contents, String longContents) {
+        this.icon = icon;
+        this.name = name;
+        this.contents = contents;
+        this.longContents = longContents;
+    }
+
+    public int getIcon() {
         return icon;
     }
 
-    public void setIcon(Drawable icon) {
+    public void setIcon(int icon) {
         this.icon = icon;
     }
 
@@ -30,6 +38,14 @@ public class HobbyItem {
 
     public void setContents(String contents) {
         this.contents = contents;
+    }
+
+    public String getLongContents() {
+        return longContents;
+    }
+
+    public void setLongContents(String contents) {
+        this.longContents = longContents;
     }
 
 }
