@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -37,6 +38,8 @@ public class DescriptionActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.des_image);
         title = (TextView) findViewById(R.id.des_title);
         des = (TextView) findViewById(R.id.long_des);
+
+        des.setMovementMethod(new ScrollingMovementMethod());
 
         topTitle.setText(titletext);
         imageView.setImageResource(imageV);
