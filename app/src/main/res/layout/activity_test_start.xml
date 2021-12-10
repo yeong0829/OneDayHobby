@@ -33,17 +33,35 @@
         android:textColor="@color/black"
         android:text="고민될땐\n랜덤이최고" />
 
-    <com.airbnb.lottie.LottieAnimationView
+    <FrameLayout
         android:id="@+id/animation"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:scaleType="fitStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/dice" />
+        app:layout_constraintTop_toBottomOf="@id/txt">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
+            android:scaleType="fitStart"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/dice2" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:scaleType="fitStart"
+            app:lottie_autoPlay="true"
+            android:layout_marginTop="45dp"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/dice" />
+
+    </FrameLayout>
+
 
     <Button
         android:id="@+id/random_btn"
