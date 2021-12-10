@@ -30,16 +30,118 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <ListView
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toBottomOf="@id/list_txt"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="80dp">
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/list_txt">
+
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="18sp"
+                android:text="식물 키우기"/>
+
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check1"
+                android:textSize="18sp"
+                android:text="캠핑"/>
+
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check2"
+                android:textSize="18sp"
+                android:text="걷기 운동"/>
+
+            <CheckBox
+                android:id="@+id/check4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check3"
+                android:textSize="18sp"
+                android:text="등산"/>
+
+           <CheckBox
+                android:id="@+id/check5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check4"
+                android:textSize="18sp"
+                android:text="십자수"/>
+
+            <CheckBox
+                android:id="@+id/check6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check5"
+                android:textSize="18sp"
+                android:text="레진 공예"/>
+
+            <CheckBox
+                android:id="@+id/check7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check6"
+                android:textSize="18sp"
+                android:text="축구"/>
+
+            <CheckBox
+                android:id="@+id/check8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/check_gray"
+                android:checked="false"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check7"
+                android:textSize="18sp"
+                android:text="퍼즐"/>
+
+            <CheckBox
+                android:id="@+id/check9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check8"
+                android:textSize="18sp"
+                android:text="요가"/>
+
+            <CheckBox
+                android:id="@+id/check10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/check9"
+                android:textSize="18sp"
+                android:text="여행"/>
 
 
-        </ListView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <com.melnykov.fab.FloatingActionButton
             android:id="@+id/info_fab_del"

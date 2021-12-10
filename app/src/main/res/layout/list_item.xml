@@ -19,7 +19,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/content"
+            android:id="@+id/list_content"
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"

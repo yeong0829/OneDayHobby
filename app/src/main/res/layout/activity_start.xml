@@ -7,11 +7,35 @@
     android:background="@color/back_gray"
     tools:context=".StartActivity">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/test_btn">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="fitStart"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/start_animation" />
+
+
+    </FrameLayout>
+
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="110dp"
         android:fontFamily="@font/notosanscjkkr_bold"
         android:includeFontPadding="false"
         android:text="One Day,\n   Hobby"
@@ -28,7 +52,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_title"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="180dp"
         android:elevation="0dp"
         android:text="오늘의 추천"
         android:textSize="24dp"
