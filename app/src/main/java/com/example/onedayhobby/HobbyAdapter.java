@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class HobbyAdapter extends BaseAdapter{
 
-    /* 아이템을 세트로 담기 위한 어레이 */
+    /* 아이템을 세트로 담기 위한 배열 */
     private ArrayList<HobbyItem> hobbyItems = new ArrayList<>();
 
     @Override

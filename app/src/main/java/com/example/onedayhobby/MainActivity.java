@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
         hobbyListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // new Intent(현재 Activity의 Context, 시작할 Activity 클래스)
                 Intent intent = new Intent(MainActivity.this, DescriptionActivity.class);
                 intent.putExtra("title", hobbyItems.get(position).name);
                 intent.putExtra("img", hobbyItems.get(position).getIcon());
