@@ -24,8 +24,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private ListView hobbyListView;
-    private ListView doListView;
-
     private ImageButton backBtn;
 
     @Override

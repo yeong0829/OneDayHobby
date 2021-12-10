@@ -1,6 +1,5 @@
 package com.example.onedayhobby;
 
-import android.graphics.drawable.Drawable;
 
 public class HobbyItem {
 
@@ -20,10 +19,6 @@ public class HobbyItem {
         return icon;
     }
 
-    public void setIcon(int icon) {
-        this.icon = icon;
-    }
-
     public String getName() {
         return name;
     }
@@ -35,17 +30,4 @@ public class HobbyItem {
     public String getContents() {
         return contents;
     }
-
-    public void setContents(String contents) {
-        this.contents = contents;
-    }
-
-    public String getLongContents() {
-        return longContents;
-    }
-
-    public void setLongContents(String contents) {
-        this.longContents = longContents;
-    }
-
 }

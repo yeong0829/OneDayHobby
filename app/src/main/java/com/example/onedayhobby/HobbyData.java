@@ -3,7 +3,9 @@ package com.example.onedayhobby;
 import java.util.ArrayList;
 
 public class HobbyData {
+
     ArrayList<HobbyItem> hobbyItems = new ArrayList<>();
+
     public HobbyData(){
 
         hobbyItems.add(new HobbyItem(R.drawable.hobby01, "식물 키우기", "정신건강에 좋은 식물 키우기",

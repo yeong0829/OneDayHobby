@@ -1,8 +1,8 @@
 package com.example.onedayhobby;
 
 public class ListItem {
+
     private String text;
-    private boolean check;
 
     public ListItem(String text) {
         this.text = text;

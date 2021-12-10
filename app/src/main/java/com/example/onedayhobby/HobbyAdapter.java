@@ -62,20 +62,4 @@ public class HobbyAdapter extends BaseAdapter{
 
         return convertView;
     }
-
-    /* 아이템 데이터 추가를 위한 함수. 자신이 원하는대로 작성 */
-    public void addItem(int img, String name, String contents, String longContents) {
-
-        HobbyItem hobbyItem = new HobbyItem(img, name, contents, longContents);
-
-        /* HobbyItem 에 아이템을 setting한다. */
-        hobbyItem.setIcon(img);
-        hobbyItem.setName(name);
-        hobbyItem.setContents(contents);
-        hobbyItem.setLongContents(longContents);
-
-        /* mItems에 HobbyItem을 추가한다. */
-        hobbyItems.add(hobbyItem);
-
-    }
 }

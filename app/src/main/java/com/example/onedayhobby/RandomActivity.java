@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class TestStartActivity extends AppCompatActivity {
+public class RandomActivity extends AppCompatActivity {
 
     private ImageButton backBtn;
     private Button randomBtn;

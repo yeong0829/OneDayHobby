@@ -32,7 +32,6 @@ public class DescriptionActivity extends AppCompatActivity {
         String titletext = intent.getStringExtra("title");
         int imageV = intent.getIntExtra("img", R.drawable.hobby01);
         String desText = intent.getStringExtra("des");
-        Log.i("TAG", "onItemClick: icon2"+imageV);
 
         topTitle = (TextView) findViewById(R.id.top_title);
         imageView = (ImageView) findViewById(R.id.des_image);
@@ -55,9 +54,5 @@ public class DescriptionActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-
-    public void setTopTitle(TextView topTitle) {
-        this.topTitle = topTitle;
     }
 }
